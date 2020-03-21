@@ -53,6 +53,9 @@ const App = (function() {
                                 document.querySelector('.alert').style.display = 'none';
                                 document.getElementById('selectCountry').value = 'India';
                                 document.getElementById('countryStat').textContent = 'Country Stats: India';
+                                document.querySelector('.cardCountryConfirmed').textContent = `Confirmed Cases of COVID19 are : ${indiaDataConfirmed}`;
+                                document.querySelector('.cardCountryRecovered').textContent = `Recovered Cases of COVID19 are : ${indiaDataRecovered}`;
+                                document.querySelector('.cardCountryDeaths').textContent = `Deaths due to COVID19 till now are: ${indiaDataDeath}`;
                                 document.querySelector('.countryRow').style.display = 'flex';
                             }, 3000);
                         }
