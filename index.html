@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/lux/bootstrap.min.css">
+
+    <title>COVID Tracker</title>
+    <style>
+        @media screen and (max-width: 425px){
+            #countryStat{
+                padding-left: 10%;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class = "container">
+            <a class="navbar-brand" href="#">COVID Tracker</a>
+        </div>
+    </nav>
+    <br>
+    <div class="d-flex justify-content-center">
+        <h1 id="worldHeading">World Stats</h1>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 d-flex justify-content-center">
+                <div class="card border-primary mb-5" style="max-width: 20rem;">
+                    <div class="card-body">
+                      <h4 class="card-title">CONFIRMED CASES</h4>
+                      <p class="card-text cardWorldConfirmed"></p>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 d-flex justify-content-center">
+                <div class="card border-primary mb-5" style="max-width: 20rem;">
+                    <div class="card-body">
+                      <h4 class="card-title">RECOVERED TILL NOW</h4>
+                      <p class="card-text cardWorldRecovered"></p>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 d-flex justify-content-center">
+                <div class="card border-primary mb-5" style="max-width: 20rem;">
+                    <div class="card-body">
+                      <h4 class="card-title">DEATHS TILL NOW</h4>
+                      <p class="card-text cardWorldDeaths"></p>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="d-flex justify-content-center">
+        <h1 id="countryStat">Country Stats: India</h1>
+    </div>
+    <br>
+    <div class="container">
+        <div class="form-group">
+            <label for="selectCountry">Select Country</label>
+            <select class="form-control" id="selectCountry">
+            </select>
+          </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="alert alert-dismissible alert-danger">
+            <strong>Oh snap!</strong> Unexpected error occured
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row countryRow">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 d-flex justify-content-center">
+                <div class="card border-primary mb-5" style="max-width: 20rem;">
+                    <div class="card-body">
+                      <h4 class="card-title">CONFIRMED CASES</h4>
+                      <p class="card-text cardCountryConfirmed"></p>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 d-flex justify-content-center">
+                <div class="card border-primary mb-5" style="max-width: 20rem;">
+                    <div class="card-body">
+                      <h4 class="card-title">RECOVERED TILL NOW</h4>
+                      <p class="card-text cardCountryRecovered"></p>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 d-flex justify-content-center">
+                <div class="card border-primary mb-5" style="max-width: 20rem;">
+                    <div class="card-body">
+                      <h4 class="card-title">DEATHS TILL NOW</h4>
+                      <p class="card-text cardCountryDeaths"></p>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="stat.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
