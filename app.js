@@ -52,6 +52,7 @@ const App = (function() {
                             setTimeout(function(){
                                 document.querySelector('.alert').style.display = 'none';
                                 document.getElementById('selectCountry').value = 'India';
+                                document.getElementById('countryStat').textContent = 'Country Stats: India';
                                 document.querySelector('.countryRow').style.display = 'flex';
                             }, 3000);
                         }
