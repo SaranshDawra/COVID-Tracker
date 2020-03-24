@@ -30,21 +30,29 @@ const App = (function() {
                 // Initialize the country selection list
                 let html = '';
                 const countries = data.countryName.countries;
-                const keys = Object.keys(countries);
-                for(const key of keys){
-                    if(key === 'India'){
-                        html+= `<option selected>${key}</option>`;
+//                 const keys = Object.keys(countries);
+//                 for(const key of keys){
+//                     if(key === 'India'){
+//                         html+= `<option selected>${key}</option>`;
+//                     }
+//                     else{
+//                         html+= `<option>${key}</option>`;
+//                     }
+//                 }
+                countries.forEach( country => {
+                    if(country.name == 'India'){
+                        html+= `<option selected>${country.name}</option>`;
                     }
                     else{
-                        html+= `<option>${key}</option>`;
+                        html+= `<option>${country.name}</option>`; 
                     }
-                }
+                });
                 document.getElementById('selectCountry').innerHTML = html;
 
                 document.getElementById('selectCountry').addEventListener('change', function(e){
                     const selectedCountry = document.getElementById('selectCountry').value;
                     document.getElementById('countryStat').textContent = `Country Stats: ${selectedCountry}`;
-                    stat.getCountryStat(countries[selectedCountry])
+                    stat.getCountryStat(selectedCountry)
                     .then( data => {
                         if(data.hasOwnProperty('error')){
                             document.querySelector('.alert').style.display = 'block';
